@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020b05;
+    color:white;
+    font-family:'Rajdhani', sans-serif;
+    overflow-x:hidden;
+}
+
+.particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(#00ff88 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:0.1;
+    z-index:-1;
+    animation:moveParticles 20s linear infinite;
+}
+
+@keyframes moveParticles{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.5);
+    border-bottom:1px solid #00ff88;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-area img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:2px solid #00ff88;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.logo-area h1{
+    font-family:'Orbitron', sans-serif;
+    color:#00ff88;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:700;
+}
+
+nav ul li a:hover{
+    color:#00ff88;
+    text-shadow:0 0 10px #00ff88;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero-content{
+    z-index:2;
+}
+
+.hero h2{
+    font-size:5rem;
+    font-family:'Orbitron', sans-serif;
+    color:#00ff88;
+    text-shadow:0 0 25px #00ff88;
+    animation:glow 2s infinite alternate;
+}
+
+.hero h3{
+    font-size:2rem;
+    margin-top:10px;
+}
+
+.hero p{
+    width:70%;
+    margin:25px auto;
+    font-size:1.2rem;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00ff88;
+    }
+
+    to{
+        text-shadow:0 0 40px #00ff88;
+    }
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.green{
+    background:#00ff88;
+    color:black;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.green:hover{
+    transform:scale(1.1);
+}
+
+.transparent{
+    border:2px solid #00ff88;
+    color:#00ff88;
+}
+
+.transparent:hover{
+    background:#00ff88;
+    color:black;
+}
+
+.hero-glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#00ff88;
+    filter:blur(250px);
+    opacity:0.15;
+}
+
+section{
+    padding:120px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    color:#00ff88;
+    font-family:'Orbitron', sans-serif;
+}
+
+.line{
+    width:120px;
+    height:4px;
+    background:#00ff88;
+    margin:20px auto;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.history-container,
+.courses-grid,
+.rules-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.history-card,
+.course-box,
+.rule-card,
+.discord-box{
+    background:rgba(0,255,136,0.05);
+    border:1px solid rgba(0,255,136,0.3);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.history-card:hover,
+.course-box:hover,
+.rule-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,255,136,0.4);
+}
+
+.history-card h3,
+.course-box h3{
+    color:#00ff88;
+    margin-bottom:15px;
+    font-size:1.5rem;
+}
+
+.rule-card span{
+    font-size:3rem;
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.discord-section{
+    text-align:center;
+}
+
+.discord-box h2{
+    color:#00ff88;
+    font-size:3rem;
+    margin-bottom:20px;
+    font-family:'Orbitron', sans-serif;
+}
+
+.discord-box p{
+    margin-bottom:30px;
+    font-size:1.2rem;
+}
+
+.discord-btn{
+    display:inline-block;
+    padding:18px 40px;
+    background:#00ff88;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:40px;
+    box-shadow:0 0 25px #00ff88;
+    transition:0.4s;
+}
+
+.discord-btn:hover{
+    transform:scale(1.1);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(0,255,136,0.3);
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:3rem;
+    }
+
+    .hero p{
+        width:100%;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+}
